@@ -1,0 +1,25 @@
+export const defaultLocation = {
+  lat: 41.2994958,
+  lng: 69.2400734,
+};
+export const keywords = [
+  "gas station",
+  "petrol station",
+  "fuel station",
+  "service station",
+  "gas pump",
+  "petrol pump",
+  "fuel pump",
+  "gasoline station",
+  "petrol garage",
+  "fuel garage",
+  "Автозаправка",
+  "Бензоколонка",
+  "Бензозаправочная станция",
+  "АЗС",
+  "Топливная станция",
+  "Benzin tekislik",
+  "Benzin kolonka",
+  "Benzin to`ldirish stantsiyasi",
+  "Yakit stansiyasi",
+];
