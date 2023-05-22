@@ -2,6 +2,7 @@ import Home from "./../pages/Home";
 import Login from "./../pages/Auth/Login";
 import Register from "./../pages/Auth/Register";
 import Profile from "../pages/Profile";
+import Stream from "../pages/Stream";
 export const privateRoutes = [
   {
     id: 0,
@@ -12,6 +13,11 @@ export const privateRoutes = [
     id: 1,
     path: "/profile",
     component: Profile,
+  },
+  {
+    id: 2,
+    path: "/stream",
+    component: Stream,
   },
 ];
 

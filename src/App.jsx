@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import { privateRoutes, publicRoutes } from "./routes";
 import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 
 function App() {
   const token = window.localStorage.getItem("token");
@@ -15,6 +16,7 @@ function App() {
           : publicRoutes.map(({ id, path, component: Component }) => (
               <Route path={path} key={id} element={<Component />} />
             ))}
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );

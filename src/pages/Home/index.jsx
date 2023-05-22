@@ -194,6 +194,7 @@ function Home() {
           setIsModalOpen={setIsModalOpen}
           ourPlace={ourplaceSelected}
           selectedPlace={selectedPlace}
+          location={location}
         />
       </GoogleMap>
     </div>

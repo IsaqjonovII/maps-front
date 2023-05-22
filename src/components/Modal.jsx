@@ -8,7 +8,9 @@ const Modal = ({
   title,
   isModalOpen,
   setIsModalOpen,
+  location,
 }) => {
+  console.log(selectedPlace);
   return (
     <div className={!isModalOpen ? "disabled" : "modal__fade"}>
       <div className={!isModalOpen ? "disabled" : "modal__wrp"}>
@@ -37,6 +39,10 @@ const Modal = ({
               {ourPlace?.isOpenNow === "true" ? "Ochiq" : "Yopiq"}
             </span>
           </div>
+          <DirectionsLink
+            source={location}
+            destination={selectedPlace?.geometry.location}
+          />
         </div>
       </div>
     </div>
