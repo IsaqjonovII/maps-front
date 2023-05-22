@@ -23,3 +23,19 @@ export const keywords = [
   "Benzin to`ldirish stantsiyasi",
   "Yakit stansiyasi",
 ];
+export const addPlace = async (place_id) => {
+  fetch("http://localhost:5000/api/v2/places", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+    },
+    crossDomain: true,
+    body: JSON.stringify({
+      place_id,
+      fuel_price: "2600",
+      isOpenNow: true,
+      working_hours: "24/7",
+    }),
+  }).then((res) => console.log(res));
+};

@@ -89,22 +89,6 @@ function Home() {
         toast.error("Serverda Xatolik");
       });
   }, []);
-  // const addPlace = async (place_id) => {
-  //   fetch("http://localhost:5000/api/v2/places", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //       "Access-Control-Allow-Origin": "*",
-  //     },
-  //     crossDomain: true,
-  //     body: JSON.stringify({
-  //       place_id,
-  //       fuel_price: "2600",
-  //       isOpenNow: true,
-  //       working_hours: "24/7",
-  //     }),
-  //   }).then((res) => console.log(res));
-  // };
   const getDistance = (lat1, lon1, lat2, lon2) => {
     const R = 6371e3; // earth radius in meters
     const φ1 = (lat1 * Math.PI) / 180; // φ, λ in radians
