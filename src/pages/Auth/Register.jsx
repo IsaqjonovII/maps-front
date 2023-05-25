@@ -30,6 +30,7 @@ const Register = () => {
           window.localStorage.setItem("token", token);
         }
         toast.success("Successful registration");
+        window.location.reload();
         navigate("/");
       })
       .catch((err) => console.log(err));
