@@ -10,7 +10,6 @@ const Modal = ({
   setIsModalOpen,
   location,
 }) => {
-  console.log(selectedPlace);
   return (
     <div className={!isModalOpen ? "disabled" : "modal__fade"}>
       <div className={!isModalOpen ? "disabled" : "modal__wrp"}>

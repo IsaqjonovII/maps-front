@@ -5,9 +5,11 @@ const DirectionsLink = ({ source, destination }) => {
     source.lng
   }&destination=${destination?.lat()},${destination?.lng()}&travelmode=driving`;
 
-  const yandexMapsUrl = `https://yandex.com/maps/?rtext=${source.lng},${
+  const yandexMapsUrl = `https://yandex.com/maps/10335/tashkent/?ll=${
     source.lat
-  }~${destination?.lng()},${destination?.lat()}&rtt=auto`;
+  }%2C${source.lng}&mode=routes&rtd=0&rtext=${source.lat}%2C${
+    source.lng
+  }~${destination?.lat()}%2C${destination?.lng()}8&rtt=auto&z=15`;
 
   return (
     <div>

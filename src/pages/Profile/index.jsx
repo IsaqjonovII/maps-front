@@ -8,7 +8,7 @@ const Profile = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("http://localhost:5000/api/v2/places", {
+    fetch("https://maps-backend-yu0n.onrender.com/api/v2/places", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

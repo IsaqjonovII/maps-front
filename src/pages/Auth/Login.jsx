@@ -14,7 +14,7 @@ const Login = () => {
 
   const loginUser = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:5000/login", {
+    await fetch("https://maps-backend-yu0n.onrender.com/login", {
       method: "POST",
       crossDomain: true,
       headers: {

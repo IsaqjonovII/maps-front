@@ -16,7 +16,7 @@ const Register = () => {
 
   const registerUser = async (e) => {
     e.preventDefault();
-    await fetch("http://localhost:5000/register", {
+    await fetch("https://maps-backend-yu0n.onrender.com/register", {
       method: "POST",
       crossDomain: true,
       headers: {
