@@ -63,14 +63,12 @@ function Home() {
     setIsModalOpen(true);
     setselectedPlace(place);
   };
-
   useEffect(() => {
     const filteredPlace = ourPlaces.filter(
       (p) => p.place_id === selectedPlaceID
     );
     setOurplaceSelected(filteredPlace[0]);
   }, [selectedPlaceID, ourPlaces]);
-
   useEffect(() => {
     fetch("https://maps-backend-yu0n.onrender.com/api/v2/places", {
       method: "GET",

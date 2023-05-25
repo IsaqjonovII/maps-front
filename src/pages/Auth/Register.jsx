@@ -13,7 +13,6 @@ const Register = () => {
   const handleInputChange = (e) => {
     setUserInfo({ ...userInfo, [e.target.name]: e.target.value });
   };
-
   const registerUser = async (e) => {
     e.preventDefault();
     await fetch("https://maps-backend-yu0n.onrender.com/register", {
