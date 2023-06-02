@@ -19,15 +19,16 @@ const DirectionsLink = ({ source, destination }) => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Get Directions (Google Maps)
+        Google Maps
       </a>
+      or
       <a
         className="my-2 text-red-600"
         href={yandexMapsUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
-        Get Directions (Yandex Maps)
+        Yandex Maps
       </a>
     </div>
   );

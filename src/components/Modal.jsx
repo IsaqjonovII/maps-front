@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import DirectionsLink from "./DirectionsLink";
+import Loader from "./Loader/index";
 
 const Modal = ({
   ourPlace,
@@ -20,6 +21,7 @@ const Modal = ({
             className="close__icon"
           />
         </div>
+        {!ourPlace ? <Loader /> : null}
         <div>
           {" "}
           <p className="my-3 ">{selectedPlace?.vicinity}</p>
