@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 import DirectionsLink from "./DirectionsLink";
 import Loader from "./Loader/index";
+
 import Stream from "./../pages/Stream/index";
 
 const Modal = ({
@@ -17,13 +20,12 @@ const Modal = ({
     <div className={!isModalOpen ? "disabled" : "modal__fade"}>
       <div className={!isModalOpen ? "disabled" : "modal__wrp"}>
         <div className="modal__header">
-          <span className="modal__title">{title}</span>
+          <span className="modal__title">{!title ? <Skeleton /> : title}</span>
           <AiOutlineClose
             onClick={() => setIsModalOpen(!isModalOpen)}
             className="close__icon"
           />
         </div>
-        {!ourPlace ? <Loader /> : null}
         {isCameraOpened ? (
           <>
             <Stream />
@@ -37,11 +39,11 @@ const Modal = ({
         ) : (
           <div>
             {" "}
-            <p className="my-3 ">{selectedPlace?.vicinity}</p>
-            <p className=" ">{ourPlace?.working_hours}</p>
+            <p className="my-3 ">{selectedPlace?.vicinity ?? <Skeleton />}</p>
+            <p className=" ">{ourPlace?.working_hours ?? <Skeleton />}</p>
             <div className="flex justify-between items-center my-3">
-              <p className=" text-2xl font-bold text-green-400">
-                {ourPlace?.fuel_price} so'm
+              <p className=" text-2xl font-bold text-green-400 flex items-center">
+                {ourPlace?.fuel_price ?? <Skeleton />} so'm
               </p>
               <span
                 className={
