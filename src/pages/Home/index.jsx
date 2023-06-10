@@ -6,7 +6,7 @@ import Modal from "../../components/Modal";
 const libraries = ["places"];
 const mapContainerStyle = {
   width: "100%",
-  height: "90vh",
+  height: "100vh",
 };
 
 function Home() {

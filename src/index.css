@@ -44,3 +44,12 @@
 .close__icon {
   cursor: pointer;
 }
+
+
+@media screen and (max-width: 678px) {
+  .modal__wrp {
+    max-width: 90%;
+    padding: 15px;
+    height: auto;
+  }
+}

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = ({ token }) => {
   if (token)
     return (
-      <div className="w-full py-4 h-[80px] px-16 flex items-center justify-between">
+      <div className="w-full py-4 h-[80px] px-16 flex items-center justify-between max-lg:px-5">
         <Link to="/">
           <div className="flex text-green-500 max-w-[8rem] items-center justify-center w-full h-full text-2xl">
             <FaCar />

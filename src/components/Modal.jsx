@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import DirectionsLink from "./DirectionsLink";
 import Loader from "./Loader/index";
+import Stream from "./../pages/Stream/index";
 
 const Modal = ({
   ourPlace,
@@ -11,6 +12,7 @@ const Modal = ({
   setIsModalOpen,
   location,
 }) => {
+  const [isCameraOpened, setIsCameraOpened] = useState(false);
   return (
     <div className={!isModalOpen ? "disabled" : "modal__fade"}>
       <div className={!isModalOpen ? "disabled" : "modal__wrp"}>
@@ -22,29 +24,47 @@ const Modal = ({
           />
         </div>
         {!ourPlace ? <Loader /> : null}
-        <div>
-          {" "}
-          <p className="my-3 ">{selectedPlace?.vicinity}</p>
-          <p className=" ">{ourPlace?.working_hours}</p>
-          <div className="flex justify-between items-center my-3">
-            <p className=" text-2xl font-bold text-green-400">
-              {ourPlace?.fuel_price} so'm
-            </p>
-            <span
-              className={
-                ourPlace?.isOpenNow === "true"
-                  ? "bg-green-400 text-white py-1 px-4 rounded-md "
-                  : "bg-red-500 text-white py-1 px-4 rounded-md "
-              }
+        {isCameraOpened ? (
+          <>
+            <Stream />
+            <button
+              onClick={() => setIsCameraOpened(!isCameraOpened)}
+              className="border border-red-400 rounded-lg text-red-400 mt-5 px-4 py-2 hover:bg-red-400 hover:text-white"
             >
-              {ourPlace?.isOpenNow === "true" ? "Ochiq" : "Yopiq"}
-            </span>
+              Ortga qaytish
+            </button>
+          </>
+        ) : (
+          <div>
+            {" "}
+            <p className="my-3 ">{selectedPlace?.vicinity}</p>
+            <p className=" ">{ourPlace?.working_hours}</p>
+            <div className="flex justify-between items-center my-3">
+              <p className=" text-2xl font-bold text-green-400">
+                {ourPlace?.fuel_price} so'm
+              </p>
+              <span
+                className={
+                  ourPlace?.isOpenNow === "true"
+                    ? "bg-green-400 text-white py-1 px-4 rounded-md "
+                    : "bg-red-500 text-white py-1 px-4 rounded-md "
+                }
+              >
+                {ourPlace?.isOpenNow === "true" ? "Ochiq" : "Yopiq"}
+              </span>
+            </div>
+            <DirectionsLink
+              source={location}
+              destination={selectedPlace?.geometry.location}
+            />
+            <button
+              onClick={() => setIsCameraOpened(!isCameraOpened)}
+              className="border border-green-400 rounded-lg text-green-400 mt-5 px-4 py-2 hover:bg-green-400 hover:text-white"
+            >
+              Jonli efir
+            </button>
           </div>
-          <DirectionsLink
-            source={location}
-            destination={selectedPlace?.geometry.location}
-          />
-        </div>
+        )}
       </div>
     </div>
   );

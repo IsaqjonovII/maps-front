@@ -6,8 +6,8 @@ import Home from "./pages/Home";
 function App() {
   const token = window.localStorage.getItem("token");
   return (
-    <div className="w-full h-[100vh] bg-white relative">
-      <Navbar token={token} />
+    <div className="w-full h-screen bg-white relative">
+      {/* <Navbar token={token} /> */}
       <Routes>
         {token
           ? privateRoutes.map(({ id, path, component: Component }) => (

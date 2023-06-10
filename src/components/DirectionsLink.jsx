@@ -12,18 +12,18 @@ const DirectionsLink = ({ source, destination }) => {
   }~${destination?.lat()}%2C${destination?.lng()}8&rtt=auto&z=15`;
 
   return (
-    <div>
+    <div className="flex items-center">
       <a
-        className="my-2 text-green-600"
+        className="my-2 font-semibold text-green-600 mr-4 text-lg"
         href={googleMapsUrl}
         target="_blank"
         rel="noopener noreferrer"
       >
         Google Maps
       </a>
-      or
+      <span>  yoki  </span>
       <a
-        className="my-2 text-red-600"
+        className="my-2 text-red-600 ml-4 font-semibold text-lg"
         href={yandexMapsUrl}
         target="_blank"
         rel="noopener noreferrer"

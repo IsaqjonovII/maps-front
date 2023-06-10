@@ -5,14 +5,14 @@ const Stream = () => {
     new window.Twitch.Embed("twitch-embed", {
       channel: "isaqjonov_i",
       width: "100%",
-      height: "100vh",
+      height: "350px",
       layout: "video",
       allowfullscreen: true,
       theme: "light",
     });
   }, []);
 
-  return <div className="w-full h-screen" id="twitch-embed"></div>;
+  return <div className="w-full h-full mt-4" id="twitch-embed"></div>;
 };
 
 export default Stream;
