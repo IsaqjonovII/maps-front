@@ -2,6 +2,12 @@ export const defaultLocation = {
   lat: 41.2994958,
   lng: 69.2400734,
 };
+export const mapContainerStyle = {
+  width: "100%",
+  height: "90vh",
+};
+export const libraries = ["places"];
+
 export const keywords = [
   "gas station",
   "petrol station",

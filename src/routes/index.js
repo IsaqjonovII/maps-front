@@ -4,6 +4,7 @@ import Register from "./../pages/Auth/Register";
 import Profile from "../pages/Profile";
 import Stream from "../pages/Stream";
 import SpeedCameras from "./../pages/Cameras/index";
+import MapList from "../components/Lists";
 export const privateRoutes = [
   {
     id: 0,
@@ -24,6 +25,11 @@ export const privateRoutes = [
     id: 3,
     path: "/radars",
     component: SpeedCameras,
+  },
+  {
+    id: 4,
+    path: "/list",
+    component: MapList,
   },
 ];
 

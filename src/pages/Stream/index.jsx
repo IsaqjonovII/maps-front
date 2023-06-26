@@ -5,7 +5,7 @@ const Stream = () => {
     new window.Twitch.Embed("twitch-embed", {
       channel: "isaqjonov_i",
       width: "100%",
-      height: "350px",
+      height: "100%",
       layout: "video",
       allowfullscreen: true,
       theme: "light",

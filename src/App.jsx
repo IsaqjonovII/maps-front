@@ -7,7 +7,7 @@ function App() {
   const token = window.localStorage.getItem("token");
   return (
     <div className="w-full h-screen bg-white relative">
-      {/* <Navbar token={token} /> */}
+      <Navbar token={token} />
       <Routes>
         {token
           ? privateRoutes.map(({ id, path, component: Component }) => (

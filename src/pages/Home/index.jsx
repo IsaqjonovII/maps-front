@@ -1,13 +1,13 @@
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import { useState, useEffect } from "react";
-import { defaultLocation, keywords } from "../../utils";
+import {
+  defaultLocation,
+  keywords,
+  mapContainerStyle,
+  libraries,
+} from "../../utils";
 import { toast } from "react-toastify";
 import Modal from "../../components/Modal";
-const libraries = ["places"];
-const mapContainerStyle = {
-  width: "100%",
-  height: "100vh",
-};
 
 function Home() {
   const [map, setMap] = useState(null);

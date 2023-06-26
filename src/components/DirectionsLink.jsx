@@ -3,13 +3,11 @@ const DirectionsLink = ({ source, destination }) => {
     source.lat
   },${
     source.lng
-  }&destination=${destination?.lat()},${destination?.lng()}&travelmode=driving`;
+  }&destination=${destination?.lat()},${destination?.lng()}&travelmode=driving&zoom=15`;
 
-  const yandexMapsUrl = `https://yandex.com/maps/10335/tashkent/?ll=${
-    source.lat
-  }%2C${source.lng}&mode=routes&rtd=0&rtext=${source.lat}%2C${
+  const yandexMapsUrl = `https://yandex.com/maps/?rtext=${source.lat},${
     source.lng
-  }~${destination?.lat()}%2C${destination?.lng()}8&rtt=auto&z=15`;
+  }~${destination?.lat()},${destination?.lng()}&rtt=auto`;
 
   return (
     <div className="flex items-center">
@@ -21,7 +19,7 @@ const DirectionsLink = ({ source, destination }) => {
       >
         Google Maps
       </a>
-      <span>  yoki  </span>
+      <span> yoki </span>
       <a
         className="my-2 text-red-600 ml-4 font-semibold text-lg"
         href={yandexMapsUrl}
