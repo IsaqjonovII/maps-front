@@ -43,7 +43,7 @@ function Home() {
       service.nearbySearch(
         {
           location: location,
-          radius: 5000,
+          radius: 10000,
           types: ["gas_station"],
           keywords: keywords,
         },
@@ -128,13 +128,13 @@ function Home() {
     const nearestGasStation = getNearestGasStation();
     if (nearestGasStation && place.place_id === nearestGasStation.place_id) {
       return {
-        scaledSize: new window.google.maps.Size(50, 55),
-        url: "https://cdn4.iconfinder.com/data/icons/map-pins-2/256/2-512.png",
+        scaledSize: new window.google.maps.Size(55, 65),
+        url: "https://static-00.iconduck.com/assets.00/gas-pump-icon-256x256-c5hynkio.png",
       };
     } else {
       return {
-        scaledSize: new window.google.maps.Size(30, 35),
-        url: "https://www.google.com/maps/vt/icon/name=assets/icons/poi/tactile/pinlet_outline_v4-2-medium.png,assets/icons/poi/tactile/pinlet_v4-2-medium.png,assets/icons/poi/quantum/pinlet/gas_pinlet-2-medium.png&highlight=c5221f,ea4335,ffffff?scale=1",
+        scaledSize: new window.google.maps.Size(35, 45),
+        url: "https://cdn-icons-png.flaticon.com/512/1723/1723649.png",
       };
     }
   };
@@ -152,7 +152,7 @@ function Home() {
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
         center={location}
-        zoom={12.5}
+        zoom={11.5}
         onLoad={(map) => setMap(map)}
       >
         {places &&
