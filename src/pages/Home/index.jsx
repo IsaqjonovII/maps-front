@@ -5,6 +5,7 @@ import {
   keywords,
   mapContainerStyle,
   libraries,
+  darkModeStyles,
 } from "../../utils";
 import { toast } from "react-toastify";
 import Modal from "../../components/Modal";
@@ -151,6 +152,9 @@ function Home() {
         center={location}
         zoom={12.5}
         onLoad={(map) => setMap(map)}
+        options={{
+          styles: darkModeStyles,
+        }}
       >
         {places &&
           places.map((place) => (

@@ -39,11 +39,15 @@ const Modal = ({
         ) : (
           <div>
             {" "}
-            <p className="my-3 ">{selectedPlace?.vicinity ?? <Skeleton />}</p>
-            <p className=" ">{ourPlace?.working_hours ?? <Skeleton />}</p>
+            <p className="my-3 ">
+              {selectedPlace?.vicinity ?? "Gas station vicinity"}
+            </p>
+            <p className=" ">
+              {ourPlace?.working_hours ?? "Gas station working hours"}
+            </p>
             <div className="flex justify-between items-center my-3">
               <p className=" text-2xl font-bold text-green-400 flex items-center">
-                {ourPlace?.fuel_price ?? <Skeleton />} so'm
+                1000 so'm
               </p>
               <span
                 className={
